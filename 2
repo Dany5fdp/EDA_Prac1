@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <math.h>
+#include<stdlib.h>
+
+int main(){
+   
+   float a,b,c;
+   
+   printf("Coeficiente cuadratico(a)\n");
+      scanf("%f",&a);
+   printf("Coeficiente lineal(b)\n");
+      scanf("%f",&b);
+   printf("Constante(c)\n");
+      scanf("%f",&c);
+ 
+   int discriminante = pow(b,2)-4*a*c;
+ 
+	if(a!=0){
+         	
+        if(discriminante<0){
+               printf("Cuenta con raices imaginarias\n");
+          	
+        float valor =  pow(b,2)-4*a*c;  
+            	
+        	float imaginario1 =  (-b+sqrt(discriminante))/(2*a); 
+            float imaginario2 =  (-b-sqrt(discriminante))/(2*a);
+		  			printf("Muestra de un par de numero imaginarios \nImaginario = %.2f Imaginario =%.2f",imaginario1,imaginario2);
+		   }
+else{
+	
+   float x1 = (-b+sqrt(discriminante))/(2*a);
+   
+   float x2=(-b-sqrt(discriminante))/(2*a);
+          			printf("Par de raices: \nx1 = %.2f x2 =%.2f",x1,x2);
+     }
+  }
+  
+      else{
+    
+       printf("El coeficiente cuadratico no puede ser debe ser 0");
+   }
+   
+   return 0;
+   
+}
